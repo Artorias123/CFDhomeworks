@@ -103,7 +103,7 @@ void advance(fftw_complex *us)//单步时间推进，Burgers方程，不控制�
 }
 */
 /*
-void advance(fftw_complex *us)//单步时间推进，Burgers方程，控制能量，不作3/2展开
+void advance(fftw_complex *us)//单步时间推进，Burgers方程，人工粘性，不作3/2展开
 {
 	complex<double> *a=(complex<double>*)(us);
     fftw_complex *ts=(fftw_complex*)fftw_malloc(sizeof(fftw_complex)*(N/2+1));
