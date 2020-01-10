@@ -405,7 +405,7 @@ void inv_mul(matrix A,matrix& B)//inv(A)*B
     }
 }
 
-matrix creat_At(int n,const vector<poly>& N)//获得时间项在标准单元上的系数矩阵
+matrix creat_At(int n,const vector<poly>& N)//获得时间项在标准单元上的系数矩阵。n：阶数；N：构造的插值基函数
 {
     if(N.size()!=n+1)
     {
@@ -422,7 +422,7 @@ matrix creat_At(int n,const vector<poly>& N)//获得时间项在标准单元上�
     }
     return _At;
 }
-matrix creat_Ax(int n,const vector<poly>& N)//获得一阶空间导数项在标准单元上的系数矩阵
+matrix creat_Ax(int n,const vector<poly>& N)//获得一阶空间导数项在标准单元上的系数矩阵，n：阶数；N：构造的插值基函数
 {
     if(N.size()!=n+1)
     {
@@ -440,7 +440,7 @@ matrix creat_Ax(int n,const vector<poly>& N)//获得一阶空间导数项在标�
     }
     return _Ax;
 }
-matrix creat_Axx(int n,const vector<poly>& N)//获得二阶空间导数项在标准单元上的系数矩阵
+matrix creat_Axx(int n,const vector<poly>& N)//获得二阶空间导数项在标准单元上的系数矩阵，n：阶数；N：构造的插值基函数
 {
     if(N.size()!=n+1)
     {
@@ -458,7 +458,7 @@ matrix creat_Axx(int n,const vector<poly>& N)//获得二阶空间导数项在标
     }
     return _Ax;
 }
-matrix get_A(int n,int o,const matrix& _A)//合并所有单元(该函数要求所有单元长度相等，如果不等需要额外修改合并方式)
+matrix get_A(int n,int o,const matrix& _A)//合并所有单元(该函数要求所有单元长度相等，如果不等需要额外修改合并方式)。n：网格单元数量；o单元阶数；_A：标准单元矩阵
 {
     matrix A(o*n+1,o*n+1);
     for(int i=0;i<n;i++)
